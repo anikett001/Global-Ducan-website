@@ -16,13 +16,9 @@
             line-height: 1.6;
         }
 
-        span {
-            color: #f97316;
-        }
-
         header {
             background: #fff;
-            border-bottom: 2px solid #f97316;
+            border-bottom: 2px solid #ff881b;
             padding: 1rem;
             text-align: center;
         }
@@ -30,7 +26,7 @@
         header h1 {
             margin: 0;
             font-size: 2.5rem;
-            color: #f97316;
+            color: #ff881b;
         }
 
         .content {
@@ -39,51 +35,20 @@
             padding: 0 1rem;
             animation: fadeIn 0.5s ease-in-out;
         }
+        .content span {
+            
+            color: #ff881b;
+
+        }
 
         .content h2,
         h3 {
-            color: #f97316;
+            color: #ff881b;
             margin-top: 1.5rem;
         }
 
         .content p {
             margin: 0.5rem 0;
-        }
-
-        footer {
-            margin-top: 3rem;
-            text-align: center;
-            padding: 1rem 0;
-            font-size: 0.9rem;
-            color: #666;
-            border-top: 1px solid #eee;
-        }
-
-        .footer-contact {
-            margin-top: 0.5rem;
-        }
-
-        .footer-contact a {
-            color: #f97316;
-            text-decoration: none;
-            margin: 0 5px;
-        }
-
-        .footer-contact span {
-            font-weight: bold;
-            color: #333;
-        }
-
-        .toHover {
-            color: #f97316;
-            text-decoration: none;
-            margin: 0 4px;
-            transition: transform 0.2s ease;
-            display: inline-block;
-        }
-
-        .toHover:hover {
-            transform: scale(1.05);
         }
 
         @keyframes fadeIn {
@@ -101,11 +66,18 @@
 </head>
 
 <body>
-     <a href="/">
-   <img src="./assets/logo.png" alt="Global Ducan Logo" 
-   style="width:260px; height:auto; display:block; margin:auto;"
-    />
- </a>
+  <button class="scrollTopBtn" id="scrollTopBtn" onclick="scrollToTop()">🡅</button>
+
+
+   <nav class="navbar">
+    <a href="./index.html">
+            <img src="./assets/logo.png" alt="Global Ducan Logo">
+        </a>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <div class="nav-links" id="navLinks">
+      <a href="./index.html">Contact Us</a>
+    </div>
+  </nav>
     <header>
         <h1>Privacy Policy</h1>
     </header>
@@ -235,7 +207,7 @@
 
         <p> <br>To exercise any of these rights, please contact
             <a class="toHover" href="mailto:support@globalducan.com"
-                style="color:#ff881b;text-decoration:none; font-weight: bold;"> support@globalducan.com</a>
+                style="font-weight: bold;"> support@globalducan.com</a>
         </p>
 
 
@@ -275,71 +247,60 @@
 
         <h2>11. Contact Information</h2>
 
-        📧 <span style="color:#f97316;">Email:</span> support@globalducan.com <br>
-        📞 <span style="color:#f97316;">Phone:</span> +91 92117 06119 <br>
-        🌐 <span style="color:#f97316;">Website:</span> https://globalducan.com <br>
+        📧 <span >Email:</span> support@globalducan.com <br>
+        📞 <span >Phone:</span> +91 92117 06119 <br>
+        🌐 <span >Website:</span> https://globalducan.com <br>
         <br>
 
         <p>By using Global Ducan, you acknowledge that you have read, understood, and agreed to these Terms and
             Conditions.</p>
 
     </div>
+      <footer>
+    <div class="heading-div">
+      &copy; 2025 <strong style="color:#ff881b;">Global Ducan</strong>. All rights reserved.
+    </div>
+    <!-- Contact Info -->
 
-    <footer
-        style="background:#fefefe; border-top:1px solid #eee; padding:2rem 1rem; text-align:center; font-size:0.95rem; color:#555;">
-        <div style="margin-bottom:1rem;">
-            &copy; 2025 <strong style="color:#ff881b;">Global Ducan</strong>. All rights reserved.
-        </div>
-        <!-- Contact Info -->
-
-        <div>
-            <span style="color: black;">Email:</span>
-            <a class="toHover" href="mailto:support@globalducan.com"
-                style="color:#ff881b;text-decoration:none; font-weight: bold;">support@globalducan.com</a> |
-            <span style="color:black;margin-left:5px;">Phone:</span>
-            <a class="toHover" href="tel:92117 06119" style="color:#ff881b;text-decoration:none; font-weight: bold;">+91
-                9211706119</a>
-        </div>
+    <div class="footer-div-1">
+      <span>Email:</span>
+      <a class="toHover" href="mailto:support@globalducan.com">support@globalducan.com</a> |
+      <span>Phone:</span>
+      <a class="toHover" href="tel:92117 06119">+91 9211706119</a>
+    </div>
 
 
-        <div style="margin-top:0.5rem;">
-            <a class="toHover" href="./privacyPolicy.html"
-                style="color:#ff881b;text-decoration:none;margin:0 10px; font-weight: bold; ">• Privacy Policy </a>
-            <a class="toHover" href="./termsAndCondition.html"
-                style="color:#ff881b;text-decoration:none;margin:0 10px; font-weight: bold;">• Terms & Conditions</a>
-        </div>
+    <div class="subHeading">
+      <a class="toHover" href="/privacyPolicy.html">• Privacy Policy </a>
+      <a class="toHover" href="/termsAndCondition.html">• Terms & Conditions</a>
+    </div>
 
 
-        <!-- Social Media Links -->
-        <div style="margin:1rem 0;">
-            <a class="toHover" href="https://www.facebook.com/globalducan" target="_blank"
-                style="margin:0 0.5rem; display:inline-block; width:32px; height:32px; border-radius:50%; background:#ff881b; color:#fff; line-height:32px; text-align:center; font-size:16px; text-decoration:none;">
-                <span><i style="color: white;" class="ri-facebook-fill"></i></span>
+    <!-- Social Media Links -->
+    <div class="social-media-links" style="margin:1rem 0;">
+      <a class="toHover" href="https://www.facebook.com/globalducan" target="_blank">
+        <span><i class="ri-facebook-fill"></i></span>
 
-            </a>
-            <a class="toHover" href="https://www.instagram.com/globalducan/" target="_blank"
-                style="margin:0 0.5rem; display:inline-block; width:32px; height:32px; border-radius:50%; background:#ff881b; color:#fff; line-height:32px; text-align:center; font-size:16px; text-decoration:none;">
-                <span><i style="color: white;" class="ri-instagram-line"></i></span>
-            </a>
-            <a class="toHover" href="https://x.com/GlobalDucan_" target="_blank"
-                style="margin:0 0.5rem; display:inline-block; width:32px; height:32px; border-radius:50%; background:#ff881b; color:#fff; line-height:32px; text-align:center; font-size:16px; text-decoration:none;">
-                <span><i style="color: white;" class="ri-twitter-x-line"></i></span>
+      </a>
+      <a class="toHover" href="https://www.instagram.com/globalducan/" target="_blank">
+        <span><i class="ri-instagram-line"></i></span>
+      </a>
+      <a class="toHover" href="https://x.com/GlobalDucan_" target="_blank">
+        <span><i class="ri-twitter-x-line"></i></span>
 
 
-            </a>
-            <a class="toHover" href="https://www.linkedin.com/company/global-ducan/" target="_blank"
-                style="margin:0 0.5rem; display:inline-block; width:32px; height:32px; border-radius:50%; background:#ff881b; color:#fff; line-height:32px; text-align:center; font-size:16px; text-decoration:none;">
-                <span><i style="color: white;" class="ri-linkedin-fill"></i></span>
+      </a>
+      <a class="toHover" href="https://www.linkedin.com/company/global-ducan/" target="_blank">
+        <span><i class="ri-linkedin-fill"></i></span>
 
-            </a>
-            <a class="toHover" href="https://www.youtube.com/@globalducan" target="_blank"
-                style="margin:0 0.5rem; display:inline-block; width:32px; height:32px; border-radius:50%; background:#ff881b; color:#fff; line-height:32px; text-align:center; font-size:16px; text-decoration:none;">
-                <span><i style="color: white;" class="ri-youtube-fill"></i></span>
+      </a>
+      <a class="toHover" href="https://www.youtube.com/@globalducan" target="_blank">
+        <span><i class="ri-youtube-fill"></i></span>
 
-            </a>
-        </div>
-    </footer>
-
+      </a>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
 
 </body>
 
